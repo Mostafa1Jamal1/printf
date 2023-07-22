@@ -9,5 +9,13 @@
  * 		used in the ALX printf project
  */
 
+typedef struct format
+{
+	char *spec;
+	int (*f)();
+} format_match;
+
+int _putchar(char c);
 
 #endif
+
