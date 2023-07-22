@@ -2,6 +2,9 @@
 #define MAIN_H
 
 #include <unistd.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
 /*
  * file: main.h
  * author: 0xTariq-dev, Mostafa1Jamal1
@@ -16,6 +19,7 @@ typedef struct format
 } format_match;
 
 int _putchar(char c);
+int print_int(va_list arg);
 
 #endif
 
