@@ -12,19 +12,6 @@
  */
 int print_int(va_list arg)
 {
-	int i = va_arg(arg, int);
-	int n, end = i % 10, d, exclude = 1, x = 1;
+	int n = va_arg(arg, int);
+	unsigned int x;
 
-	i = i / 10;
-	n = i;
-
-	if (end < 0)
-	{
-		write(1, '-', 1);
-		n = -n;
-		end = -end;
-		i++;
-	}
-
-	return ();
-}
