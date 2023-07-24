@@ -8,12 +8,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
-/**
- * file: main.h
- * author: 0xTariq-dev, Mostafa1Jamal1
- * describtion: Header file contains declarations for functions
- * 		used in the ALX printf project
- */
 
 /**
  * struct format - struct to hold different format specifier.
@@ -32,5 +26,7 @@ int print_int(va_list arg);
 int print_char(va_list arg);
 int print_str(va_list arg);
 int _printf(const char *format, ...);
+
+
 
 #endif

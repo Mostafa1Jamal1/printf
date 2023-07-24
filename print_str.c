@@ -10,7 +10,7 @@ int print_str(va_list arg)
 	char *str = va_arg(arg, char *);
 	int ret = 0;
 
-	while(*str)
+	while (*str)
 	{
 		_putchar(*str);
 		str++;
