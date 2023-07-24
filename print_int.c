@@ -13,7 +13,6 @@
 int print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
-	int x[];
 	int div = 1, i = 0;
 
 	if (n < 0)
@@ -29,12 +28,9 @@ int print_int(va_list arg)
 
 	for (i = 0; div != 0; i++)
 	{
-		x[i] = (n %= div);
+		_putchar((n / div)  + '0');
+		n %= div;
 		div /= 10;
-	}
-	for (i = 0; i <= (div + 1); i++)
-	{
-		_putchar((int)x[i] + '0');
 	}
 	return (i);
 }
