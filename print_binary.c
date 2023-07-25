@@ -26,8 +26,6 @@ int print_bin(va_list arg)
 		ret++;
 	}
 	i--;
-	_putchar('0');
-	ret += 1;
 	while (!(i < 0))
 	{
 		_putchar(*(bin + i) + '0');
