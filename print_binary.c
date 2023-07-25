@@ -11,6 +11,11 @@ int print_bin(va_list arg)
 	char *bin;
 	int ret = 0, arr_size = 0, i;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (tempn)
 	{
 		tempn /= 2;
