@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * Gfunc - 
- * @format: 
- * Return:
+ * Gfunc - get the requried function to operate
+ * @format: pointer to char of the format
+ * Return: function pointer of the required function
+ * or NULL if no format matching.
 */
 int (*Gfunc(const char *format))(va_list)
 {
@@ -12,7 +13,7 @@ int (*Gfunc(const char *format))(va_list)
 		{'\0', NULL}};
 
 	format++;
-	while (*format != (spec_arr + i)->spec 
+	while (*format != (spec_arr + i)->spec
 				&& (spec_arr + i)->spec != '\0')
 		i++;
 	if ((spec_arr + i)->spec == '\0')
