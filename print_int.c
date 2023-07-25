@@ -13,19 +13,20 @@
 int print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
-	int div = 1, i = 0;
+	int div = 1, i = 0, x = 0;
 	unsigned int num;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		num = -n;
+		i += 1;
 	}
 	else
 		num = n;
-	for (; num / div >= 10; i++)
+	for (; num / div >= 10; x++)
 		div *= 10;
-	for (i = 0; div != 0; i++)
+	for (; div != 0; i++)
 	{
 		_putchar((num / div)  + '0');
 		num %= div;
