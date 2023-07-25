@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 	int (*function)();
 	va_list arg;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' &&
+				(format[1] == '\0' || format[2] == '\0')))
 		return (-1);
 	va_start(arg, format);
 	while (*format)
@@ -33,7 +34,7 @@ int _printf(const char *format, ...)
 			function = Gfunc(format);
 			if (function == NULL)
 			{
-				_putchar(*format);
+				ret += _putchar(*format);
 				format++;
 			}
 			else
