@@ -8,18 +8,11 @@
 
 int _printf(const char *format, ...)
 {
-	int ret = 0, i;
-	spec_f spec_arr[] = {
-		{'c', print_char},
-		{'s', print_str},
-		{'d', print_int},
-		{'i', print_int},
-		{'%', print_char},
-		{'\0', NULL}
-	};
+	int ret = 0;
+	int (*function)();
 	va_list arg;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(arg, format);
 	while (*format)
@@ -29,16 +22,25 @@ int _printf(const char *format, ...)
 		ret += write(1, format, 1);
 		format++;
 		}
-		if (*format == '%')
+		if (*format == '%' && (*(format + 1)) == '%')
 		{
-			i = 0;
-			format++;
-			while (*format != (spec_arr + i)->spec && (spec_arr + i)->spec != '\0')
-				i++;
-			if ((spec_arr + i)->spec == '\0')
-				return (-1);
-			ret += (spec_arr + i)->f(arg);
-			format++;
+			_putchar('%');
+			format += 2;
+			ret++;
+		}
+		if (*format == '%' && (*(format + 1)) != '%')
+		{
+			function = Gfunc(format);
+			if (function == NULL)
+			{
+				_putchar(*format);
+				format++;
+			}
+			else
+			{
+			ret += function(arg);
+			format += 2;
+			}
 		}
 	}
 	return (ret);
