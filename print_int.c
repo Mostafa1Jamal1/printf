@@ -22,10 +22,8 @@ int print_int(va_list arg)
 	}
 	else
 		n = n;
-
 	for (; n / div >= 10; i++)
 		div *= 10;
-
 	for (i = 0; div != 0; i++)
 	{
 		_putchar((n / div)  + '0');
