@@ -12,8 +12,9 @@ int _printf(const char *format, ...)
 	int (*function)();
 	va_list arg;
 
-	if (format == NULL || (format[0] == '%' &&
-				(format[1] == '\0' || format[2] == '\0')))
+	if (format == NULL ||
+	(format[0] == '%' && format[1] == '\0')
+	|| (format[0] == '%' && format[1] == ' ' && format[2] == '\0'))
 		return (-1);
 	va_start(arg, format);
 	while (*format)
