@@ -13,6 +13,11 @@ int print_HEX(va_list arg)
 	char *hex_n;
 	int ret = 0, size = 0, i;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		i += 1;
+	}
 	while (tmp)
 	{
 		tmp /= 16;
@@ -48,6 +53,11 @@ int print_hex(va_list arg)
 	char *hex_n;
 	int ret = 0, size = 0, i;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		i += 1;
+	}
 	while (tmp)
 	{
 		tmp /= 16;
