@@ -28,7 +28,10 @@ int print_str(va_list arg);
 int print_bin(va_list arg);
 int (*Gfunc(const char *format))(va_list);
 int _printf(const char *format, ...);
-
+int print_HEX(va_list arg);
+int print_hex(va_list arg);
+int print_octal(va_list arg);
+int print_unsigned(va_list arg);
 
 
 #endif
