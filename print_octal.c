@@ -48,11 +48,6 @@ int print_unsigned(va_list arg)
 	unsigned int num = va_arg(arg, int);
 	int div = 1, i = 0, x = 0;
 
-	if (num = 0)
-	{
-		_putchar('0');
-		i += 1;
-	}
 	for (; num / div >= 10; x++)
 		div *= 10;
 	for (; div != 0; i++)

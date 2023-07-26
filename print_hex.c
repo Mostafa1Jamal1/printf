@@ -16,7 +16,7 @@ int print_HEX(va_list arg)
 	if (n == 0)
 	{
 		_putchar('0');
-		i += 1;
+		ret += 1;
 	}
 	while (tmp)
 	{
@@ -56,7 +56,7 @@ int print_hex(va_list arg)
 	if (n == 0)
 	{
 		_putchar('0');
-		i += 1;
+		ret += 1;
 	}
 	while (tmp)
 	{
