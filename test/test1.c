@@ -13,9 +13,10 @@ int main(void)
 	int len;
 	int len2;
 	/* Normal Cases */
+/**
 	_printf("Custom printf\n");
 
-	len = _printf("binary:[%p]\n", b);
+	len = _printf("binary:[%b]\n", b);
 	len = _printf("unsigned:[%u]\n", b);
 	len = _printf("octal:[%o]\n", b);
 	len = _printf("Octal:[%o]\n", b);
@@ -23,6 +24,7 @@ int main(void)
 	len2 = _printf("hexa:[%x]\n", b);
 	_printf("Length:[%d]\n", len);
 	_printf("Length:[%d]\n", len2);
+ */
 	printf("*******************************\n");
 	printf("Built-In printf\n");
 
