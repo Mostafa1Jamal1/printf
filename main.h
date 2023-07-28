@@ -32,7 +32,7 @@ int print_HEX(va_list arg);
 int print_hex(va_list arg);
 int print_octal(va_list arg);
 int print_unsigned(va_list arg);
-int print_pointer(va_list arg)
+int print_pointer(va_list arg);
 
 
 #endif

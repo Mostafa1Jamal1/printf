@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int b = 0;
+	int b = -83474;
 	int x = -56435;
 	int len;
 	int len2;
@@ -20,8 +20,8 @@ int main(void)
 	len = _printf("octal:[%o]\n", b);
 	len = _printf("Octal:[%o]\n", b);
 	len2 = _printf("HEXA:[%X]\n", b);
-	len2 = _printf("hexa:[%x]\n", b);
-	_printf("Length:[%d]\n", len);
+	len2 = _printf("hexa:[%p]\n", b);
+	_printf("Length:[%p]\n", len);
 	_printf("Length:[%d]\n", len2);
 	printf("*******************************\n");
 	printf("Built-In printf\n");
@@ -30,7 +30,7 @@ int main(void)
 	len = printf("unsigned(56435):[%u]\n", x);
 	len = printf("Octal:[%o]\n", b);
 	len2 = printf("HEXA:[%X]\n", b);
-	len2 = printf("hexa:[%x]\n", b);
+	len2 = printf("hexa:[%p]\n", b);
 	printf("Length:[%d]\n", len);
 	printf("Length:[%d]\n", len2);
 	return (0);
