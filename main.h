@@ -32,7 +32,11 @@ int print_HEX(va_list arg);
 int print_hex(va_list arg);
 int print_octal(va_list arg);
 int print_unsigned(va_list arg);
+<<<<<<< HEAD
 int print_pointer(va_list arg);
+=======
+int print_pointer(va_list arg)
+>>>>>>> c6147f3c3ca9ca848f59c3ecb5c175ae14ed7f0e
 
 
 #endif
