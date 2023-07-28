@@ -1,6 +1,5 @@
 #include <limits.h>
 #include <stdio.h>
-#include "main.h"
 /**
  * main - Entry point
  *
@@ -8,7 +7,7 @@
  */
 int main(void)
 {
-	int b = 0;
+	int b = -83474;
 	int x = -56435;
 	int len;
 	int len2;

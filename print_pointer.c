@@ -17,7 +17,7 @@ int print_pointer(va_list arg)
 	{
 		_printf("(nil)");
 		ret += 1;
-		return (ret);
+		return (ret = 1);
 	}
 	while (tmp)
 	{
@@ -27,8 +27,6 @@ int print_pointer(va_list arg)
 	hex_n = malloc(size + 1);
 	if (hex_n == NULL)
 		exit(-1);
-	_putchar('0');
-	_putchar('x');
 	for (i = 0; n != 0; i++)
 	{
 		*(hex_n + i) = hex[n % 16];
@@ -38,6 +36,8 @@ int print_pointer(va_list arg)
 	*(hex_n + i) = '\0';
 	for (i = (size - 1); i >= 0; i--)
 	{
+		_putchar('0');
+		_putchar('x');
 		_putchar(hex_n[i]);
 	}
 	return (ret);
