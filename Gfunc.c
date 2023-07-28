@@ -11,7 +11,8 @@ int (*Gfunc(const char *format))(va_list)
 	spec_f spec_arr[] = {{'c', print_char}, {'s', print_str},
 		{'d', print_int}, {'i', print_int}, {'%', print_char},
 		{'b', print_bin}, {'x', print_hex}, {'X', print_HEX},
-		{'o', print_octal}, {'u', print_unsigned}, {'\0', NULL}};
+		{'o', print_octal}, {'u', print_unsigned},
+		{'p', print_pointer}, {'\0', NULL}};
 
 	format++;
 	while (*format != (spec_arr + i)->spec
